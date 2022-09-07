@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+mt19937 rng(0);
 
 int createPartition(vector<int> &nums, int L, int R)
 {
@@ -29,13 +30,19 @@ void quickSort(vector<int> &nums, int L, int R)
 
 
 int main(){
-    vector<int> nums = {5, 1, 2, 7, 3, 10, 6};
-    //int p = createPartition(nums, 0, nums.size() - 1);
-    //cout << p << "\n";
+
+    int n = 1000000;
+    vector<int> nums(n);
+    for(int i = 0; i < n; i++) nums[i] = i;
+
+    shuffle(nums.begin(), nums.end(), rng);
     quickSort(nums, 0, nums.size() - 1);
 
-    for(auto it : nums)
-        cout << it << " ";
+    if(is_sorted(nums.begin(), nums.end())) puts("CORRECT");
+    else puts("NOT CORRECT");
 
+    /*for(auto it : nums)
+        cout << it << " ";
+    */
     return 0;
 }

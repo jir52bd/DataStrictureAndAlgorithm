@@ -9,8 +9,8 @@
 # testing
 /coverage
 
-/*.exe
-/*.o
+*.exe
+*.o
 
 # production
 /build
