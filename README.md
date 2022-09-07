@@ -1,2 +1,2 @@
 # DataStrictureAndAlgorithm
-Data Stricture, Algorithm, Problem solving, Necessary Link 
+Data Stricture, Algorithm, Problems solving, Necessary Link 
